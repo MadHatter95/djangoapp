@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<!--{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a> |
+  <a href="{% url 'signup' %}">signup</a>
+{% endif %} -->
+
+<div class="jumbotron">
+    <center><h1 class="display-4">Stock Market Prediction Using Neural Network</h1></center>
+    <p font size="17">
+      Artificial Neural Network approach has been used herein to predict the adjusted closing price of stocks. 
+      Investors in stock market want to maximize their profits, it would be beneficial for them if the market movement can be predicted beforehand. 
+      Historical data of the some stocks has been used for building and training the models. Later, the results from the model has been compared with the real data to ascertain the accuracy of the model. 
+      Results from neural network is more promising in predicting stock price that actually is not certainly predictable.
+     </p>
+    <p class="lead">
+     <center> <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Enter</a></center>
+    </p>
+  </div>
+  
+{% endblock %}

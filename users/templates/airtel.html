@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Airtel{% endblock %}
+
+{% block content %}
+
+<br>
+<div class="container-fluid">
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#profile">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle='tab' href="#features">Stock Prediction</a>
+    </li>
+    
+    </li>
+  </ul>
+  
+  <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade show active" id="home">
+      <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tv-medium-widget"></div>
+    <div class="tradingview-widget-copyright"><span class="blue-text"><a href="https://in.tradingview.com/symbols/NSE-BHARTIARTL/" rel="noopener" target="_blank"><span class="blue-text">Airtel</span></a></span> <span class="blue-text">Quotes</span> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.MediumWidget(
+    {
+    "container_id": "tv-medium-widget",
+    "symbols": [
+      [
+        "Airtel",
+        "NSE:BHARTIARTL|1y"
+      ]
+    ],
+    "greyText": "Quotes by",
+    "gridLineColor": "#e9e9ea",
+    "fontColor": "#83888D",
+    "underLineColor": "#dbeffb",
+    "trendLineColor": "#4bafe9",
+    "width": "1000px",
+    "height": "400px",
+    "locale": "in"
+  }
+    );
+    </script>
+  </div>
+  <!-- TradingView Widget END --></div>
+      <!--2-->
+      <div class="tab-pane fade show" id="profile">
+         
+          <table class="table table-hover" style="width:0%">
+              <thead>
+                <tr>
+                  <th scope="col">Airtel</th>
+                  <th scope="col"></th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <th scope="row">Type</th>
+                      <td>Public Company</td>
+                      <th scope="row">Industry</th>
+                      <td>Telecommunications</td>
+                      <th scope="row">Founded</th>
+                      <td>July 7 1995; New Delhi, India</td>
+                      <th scope="row">Key People</th>
+                      <td><ul><li>Sunil Mittal (Chairman)</li>
+                        <li>Gopal Vittal (MD & CEO)</li>
+                        
+                      </ul></td>
+                      <th scope="row">Products</th>
+                      <td><ul><li>Fixed Line Telephone</li><li>
+                        Mobile Phone
+                      </li><li>Broadband</li>
+                      <li>Satellite Television</li>
+                      <li>Digital Television</li>
+                      <li>Internet Television</li>
+                      <li>IPTV</li>
+                    </ul></td>
+                    </tr>
+              </tbody></table>
+
+             <center> <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com" rel="noopener" target="_blank"><a href="https://in.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</a></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                {
+                "width" : "1080",
+                "height" : "150",
+                "locale" : "in",
+                "symbolsGroups" : [
+                  {
+                    "originalName": "Indices",
+                    "symbols": [
+                      {
+                        "name": "NSE:BHARTIARTL",
+                        "displayName": "Airtel"
+                      }
+                    ],
+                    "name": "Indices"
+                  }
+                ]
+              }
+                </script>
+              </div></center>
+              <!-- TradingView Widget END -->
+        </div>
+          <!--3-->
+        <div class="tab-pane fade show" id="features">
+            <div>
+                <p>Total Actual Price : {{ x2 }}</p>
+                <p>Total Predicted Price : {{ y2 }}</p>
+                </div>
+             <div>
+             <!-- <img src="C:\\DJANGO\\stock_market\\users\\static\\img\\tes.JPG">-->
+             <img src="{% static "images/Capture3.jpg" %}" />
+           </div>
+        </div>
+       
+          
+          <!-- Graph  -->
+          
+        
+  
+{% endblock %}

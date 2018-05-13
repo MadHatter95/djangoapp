@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block content %}
+<br>
+<h2><center>PORTFOLIO</h2>
+<div class="container-fluid" style="width:300px">
+  <ul class="list-group">
+    <li class="list-group-item"><center><a href="{% url 'tesla' %}">TESLA</a></center></li>
+    <li class="list-group-item"><center><a href="{% url 'apple' %}">APPLE</a></center></li>
+    <li class="list-group-item"><center><a href="{% url 'microsoft' %}">MICROSOFT</a></center></li>
+    <li class="list-group-item"><center><a href="{% url 'google' %}">GOOGLE</a></center></li>
+    <li class="list-group-item"><center><a href="{% url 'amazon' %}">AMAZON</a></center></li>
+    <li class="list-group-item"><center><a href="{% url 'airtel' %}">AIRTEL</a></li>
+      <li class="list-group-item"><center><a href="{% url 'sensex' %}">SENSEX</a></li>  
+  </ul>
+  </div>
+{% endblock %}
